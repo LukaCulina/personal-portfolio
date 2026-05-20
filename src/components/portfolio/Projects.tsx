@@ -1,48 +1,21 @@
 import { Section } from "./Section";
 import { Github, ExternalLink } from "lucide-react";
-
-const projects = [
-  {
-    name: "Terraforming Mars",
-    desc: "Desktop implementacija popularne društvene igre s naprednom logikom poteza i UI-em u JavaFX-u.",
-    tags: ["Java", "JavaFX"],
-    href: "https://github.com/LukaCulina",
-  },
-  {
-    name: "Pomodoro Timer",
-    desc: "Minimalistički produktivnosti tajmer s konfigurabilnim ciklusima rada i pauze.",
-    tags: ["JavaScript", "HTML", "CSS"],
-    href: "https://github.com/LukaCulina",
-  },
-  {
-    name: "Snake Game",
-    desc: "Klasična Snake igra napisana u čistom JavaScriptu uz Canvas API.",
-    tags: ["JavaScript", "Canvas"],
-    href: "https://github.com/LukaCulina",
-  },
-  {
-    name: "TrekTrip",
-    desc: "Full-stack aplikacija s React frontendom koji konzumira RESTful API izgrađen na Spring Bootu.",
-    tags: ["React", "Spring Boot", "REST"],
-    href: "https://github.com/LukaCulina",
-  },
-  {
-    name: "FilmStar",
-    desc: "Responzivna React aplikacija koja integrira eksterni API za upravljanje filmskim podacima.",
-    tags: ["React", "API"],
-    href: "https://github.com/LukaCulina",
-  },
-  {
-    name: "Tech4Society",
-    desc: "Erasmus+ BIP projekt fokusiran na digitalne kolaboracijske alate i analizu podataka pomoću LLM-ova.",
-    tags: ["Collaboration", "LLM", "Data"],
-    href: "https://github.com/LukaCulina",
-  },
-];
+import { useApp } from "@/contexts/AppContext";
+import type { TranslationKey } from "@/i18n/translations";
 
 export function Projects() {
+  const { t } = useApp();
+  const projects: { name: string; descKey: TranslationKey; tags: string[]; href: string }[] = [
+    { name: "Terraforming Mars", descKey: "proj_tm_desc", tags: ["Java", "JavaFX"], href: "https://github.com/LukaCulina" },
+    { name: "Pomodoro Timer", descKey: "proj_pom_desc", tags: ["JavaScript", "HTML", "CSS"], href: "https://github.com/LukaCulina" },
+    { name: "Snake Game", descKey: "proj_snake_desc", tags: ["JavaScript", "Canvas"], href: "https://github.com/LukaCulina" },
+    { name: "TrekTrip", descKey: "proj_trek_desc", tags: ["React", "Spring Boot", "REST"], href: "https://github.com/LukaCulina" },
+    { name: "FilmStar", descKey: "proj_film_desc", tags: ["React", "API"], href: "https://github.com/LukaCulina" },
+    { name: "Tech4Society", descKey: "proj_tech_desc", tags: ["Collaboration", "LLM", "Data"], href: "https://github.com/LukaCulina" },
+  ];
+
   return (
-    <Section id="projects" eyebrow="Projekti" title="Stvari koje sam izgradio">
+    <Section id="projects" eyebrow={t("proj_eyebrow")} title={t("proj_title")}>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((p) => (
           <a
@@ -73,14 +46,14 @@ export function Projects() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{t(p.descKey)}</p>
               <div className="flex flex-wrap gap-1.5">
-                {p.tags.map((t) => (
+                {p.tags.map((tag) => (
                   <span
-                    key={t}
+                    key={tag}
                     className="text-xs px-2.5 py-1 rounded-full bg-secondary/60 text-muted-foreground border border-border"
                   >
-                    {t}
+                    {tag}
                   </span>
                 ))}
               </div>

@@ -1,22 +1,16 @@
 import { Section } from "./Section";
 import { GraduationCap } from "lucide-react";
-
-const items = [
-  {
-    title: "Master of Engineering in Information Technology",
-    org: "Zagreb University of Applied Sciences",
-    period: "09.2023 — danas",
-  },
-  {
-    title: "Erasmus+ Exchange — Digital Sciences (MA)",
-    org: "Cologne University of Applied Sciences",
-    period: "10.2024 — 02.2025",
-  },
-];
+import { useApp } from "@/contexts/AppContext";
+import type { TranslationKey } from "@/i18n/translations";
 
 export function Education() {
+  const { t } = useApp();
+  const items: { title: TranslationKey; org: TranslationKey; period: TranslationKey }[] = [
+    { title: "edu_master_title", org: "edu_master_org", period: "edu_master_period" },
+    { title: "edu_erasmus_title", org: "edu_erasmus_org", period: "edu_erasmus_period" },
+  ];
   return (
-    <Section id="education" eyebrow="Edukacija" title="Akademski put">
+    <Section id="education" eyebrow={t("edu_eyebrow")} title={t("edu_title")}>
       <div className="grid md:grid-cols-2 gap-5">
         {items.map((it) => (
           <div
@@ -26,10 +20,10 @@ export function Education() {
             <div className="w-11 h-11 rounded-xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 shadow-glow">
               <GraduationCap size={20} />
             </div>
-            <h3 className="font-display font-semibold mb-1">{it.title}</h3>
-            <p className="text-muted-foreground text-sm mb-3">{it.org}</p>
+            <h3 className="font-display font-semibold mb-1">{t(it.title)}</h3>
+            <p className="text-muted-foreground text-sm mb-3">{t(it.org)}</p>
             <span className="text-xs px-3 py-1 rounded-full border border-border text-muted-foreground">
-              {it.period}
+              {t(it.period)}
             </span>
           </div>
         ))}

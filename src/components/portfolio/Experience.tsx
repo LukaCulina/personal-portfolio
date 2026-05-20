@@ -1,9 +1,22 @@
 import { Section } from "./Section";
 import { Briefcase } from "lucide-react";
+import { useApp } from "@/contexts/AppContext";
+import type { TranslationKey } from "@/i18n/translations";
 
 export function Experience() {
+  const { t } = useApp();
+  const bullets: TranslationKey[] = [
+    "exp_b1",
+    "exp_b2",
+    "exp_b3",
+    "exp_b4",
+    "exp_b5",
+    "exp_b6",
+    "exp_b7",
+    "exp_b8",
+  ];
   return (
-    <Section id="experience" eyebrow="Iskustvo" title="Profesionalni put">
+    <Section id="experience" eyebrow={t("exp_eyebrow")} title={t("exp_title")}>
       <div className="relative pl-8 border-l border-border">
         <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-gradient-primary shadow-glow" />
         <div className="p-6 rounded-2xl border border-border bg-card/50 hover:bg-card transition-colors">
@@ -11,28 +24,19 @@ export function Experience() {
             <div>
               <h3 className="text-xl font-display font-semibold flex items-center gap-2">
                 <Briefcase size={18} className="text-primary" />
-                Platform Build Specialist
+                {t("exp_role")}
               </h3>
-              <p className="text-muted-foreground">Pliva Hrvatska d.o.o.</p>
+              <p className="text-muted-foreground">{t("exp_company")}</p>
             </div>
             <span className="text-sm text-muted-foreground px-3 py-1 rounded-full border border-border">
-              07.2023 — danas
+              {t("exp_period")}
             </span>
           </div>
           <ul className="space-y-2 text-muted-foreground">
-            {[
-              "Izrada i održavanje web stranica u CMS-u",
-              "QA, UAT i sanity testiranje web stranica",
-              "Implementacija SEO-a i praćenje performansi",
-              "Priprema i obrada vizualnih materijala",
-              "Izrada UTM QR kodova i linkova za analitiku",
-              "Razvoj interaktivnih kvizova i Excel izvještaja",
-              "Osnovna HTML i CSS implementacija",
-              "Suradnja s međunarodnim timovima",
-            ].map((t) => (
-              <li key={t} className="flex gap-3">
+            {bullets.map((k) => (
+              <li key={k} className="flex gap-3">
                 <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                <span>{t}</span>
+                <span>{t(k)}</span>
               </li>
             ))}
           </ul>

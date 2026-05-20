@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AppProvider } from "@/contexts/AppContext";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
@@ -17,13 +18,10 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio Luke Čuline — full-stack developera i Platform Build Specialista. React, Spring Boot, JavaFX i moderna web rješenja.",
+          "Portfolio of Luka Čulina — full-stack developer and Platform Build Specialist. React, Spring Boot, JavaFX and modern web solutions.",
       },
       { property: "og:title", content: "Luka Čulina — Portfolio" },
-      {
-        property: "og:description",
-        content: "Full-stack developer. Projekti, iskustvo i kontakt.",
-      },
+      { property: "og:description", content: "Full-stack developer. Projects, experience and contact." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -32,17 +30,19 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <FutureProjects />
-      <Education />
-      <Contact />
-      <Footer />
-    </main>
+    <AppProvider>
+      <main className="min-h-screen bg-background text-foreground transition-colors duration-500">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <FutureProjects />
+        <Education />
+        <Contact />
+        <Footer />
+      </main>
+    </AppProvider>
   );
 }
