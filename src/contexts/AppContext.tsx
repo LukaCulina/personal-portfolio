@@ -26,18 +26,21 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-	const [lang, setLangState] = useState<Lang>("en");
-	const [theme, setThemeState] = useState<Theme>("dark");
-
-	useEffect(() => {
-		const storedLang = (typeof window !== "undefined" &&
-			localStorage.getItem("lang")) as Lang | null;
-		const storedTheme = (typeof window !== "undefined" &&
-			localStorage.getItem("theme")) as Theme | null;
-		if (storedLang === "hr" || storedLang === "en") setLangState(storedLang);
-		if (storedTheme === "dark" || storedTheme === "light")
-			setThemeState(storedTheme);
-	}, []);
+	const [lang, setLangState] = useState<Lang>(() => {
+		if (typeof window !== "undefined") {
+			const storedLang = localStorage.getItem("lang");
+			if (storedLang === "hr" || storedLang === "en") return storedLang as Lang;
+		}
+		return "en";
+	});
+	const [theme, setThemeState] = useState<Theme>(() => {
+		if (typeof window !== "undefined") {
+			const storedTheme = localStorage.getItem("theme");
+			if (storedTheme === "dark" || storedTheme === "light")
+				return storedTheme as Theme;
+		}
+		return "dark";
+	});
 
 	useEffect(() => {
 		const root = document.documentElement;
@@ -59,7 +62,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 		setThemeState((p) => (p === "dark" ? "light" : "dark"));
 
 	const t = (key: TranslationKey) =>
-		translations[lang][key] ?? translations.hr[key] ?? key;
+		translations[lang][key] ?? translations.en[key] ?? key;
 
 	return (
 		<AppContext.Provider
