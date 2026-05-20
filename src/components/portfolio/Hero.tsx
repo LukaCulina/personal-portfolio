@@ -3,7 +3,16 @@ import profile from "@/assets/profile.jpg";
 import { useApp } from "@/contexts/AppContext";
 
 export function Hero() {
-	const { t } = useApp();
+	const { t, lang } = useApp();
+
+	const isEnglish = lang === "en";
+	const cvFilePath = isEnglish
+		? "/cv/Luka-Culina-CV-EN.pdf"
+		: "/cv/Luka-Culina-CV-HR.pdf";
+	const cvFileName = isEnglish
+		? "Luka_Culina_CV_EN.pdf"
+		: "Luka_Culina_CV_HR.pdf";
+
 	return (
 		<section id="top" className="relative pt-32 pb-24 overflow-hidden">
 			<div
@@ -41,8 +50,8 @@ export function Hero() {
 							<Mail size={16} /> {t("hero_contact")}
 						</a>
 						<a
-							href="/cv/Luka-Culina-CV.pdf"
-							download
+							href={cvFilePath}
+							download={cvFileName}
 							className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-primary/40 bg-primary/10 text-foreground font-medium hover:bg-primary/20 transition-colors"
 						>
 							<Download size={16} /> {t("hero_cv")}
