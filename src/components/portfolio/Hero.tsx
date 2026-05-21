@@ -14,7 +14,10 @@ export function Hero() {
 		: "Luka_Culina_CV_HR.pdf";
 
 	return (
-		<section id="top" className="relative pt-32 pb-24 overflow-hidden">
+		<section
+			id="top"
+			className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden"
+		>
 			<div
 				className="absolute inset-0 bg-gradient-hero pointer-events-none"
 				aria-hidden
@@ -29,7 +32,6 @@ export function Hero() {
 				style={{ background: "var(--gradient-primary)", animationDelay: "-6s" }}
 				aria-hidden
 			/>
-
 			<div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-[1fr_auto] gap-12 items-center">
 				<div className="space-y-6">
 					<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-card/50 text-xs text-muted-foreground">
@@ -69,7 +71,7 @@ export function Hero() {
 
 				<div className="relative justify-self-center md:justify-self-end animate-float">
 					<div
-						className="absolute -inset-4 rounded-full opacity-60 blur-2xl"
+						className="absolute -inset-2 md:-inset-4 rounded-full opacity-60 blur-xl md:blur-2xl"
 						style={{ background: "var(--gradient-primary)" }}
 						aria-hidden
 					/>
@@ -83,7 +85,6 @@ export function Hero() {
 					</div>
 				</div>
 			</div>
-
 			<a
 				href="#about"
 				className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors"
