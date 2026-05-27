@@ -59,7 +59,7 @@ export function Navbar() {
 						aria-label="Toggle language"
 						className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-card/50 hover:bg-card text-xs font-medium transition-colors"
 					>
-						<Languages size={14} />
+						<Languages size={18} />
 						{lang.toUpperCase()}
 					</button>
 					<button
@@ -68,7 +68,7 @@ export function Navbar() {
 						aria-label="Toggle theme"
 						className="p-2 rounded-full border border-border bg-card/50 hover:bg-card transition-colors"
 					>
-						{theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+						{theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
 					</button>
 					<button
 						type="button"
@@ -76,9 +76,9 @@ export function Navbar() {
 						onClick={() => setOpen((v) => !v)}
 						className="lg:hidden p-2 rounded-md border border-border text-foreground"
 					>
-						<div className="w-4 h-[2px] bg-current mb-1" />
-						<div className="w-4 h-[2px] bg-current mb-1" />
-						<div className="w-4 h-[2px] bg-current" />
+						<div className="w-4 h-0.5 bg-current mb-1" />
+						<div className="w-4 h-0.5 bg-current mb-1" />
+						<div className="w-4 h-0.5 bg-current" />
 					</button>
 				</div>
 			</nav>

@@ -23,12 +23,12 @@ export function Hero() {
 				aria-hidden
 			/>
 			<div
-				className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full opacity-30 blur-3xl animate-blob"
+				className="absolute -top-32 -left-32 w-105 h-105 rounded-full opacity-30 blur-3xl animate-blob"
 				style={{ background: "var(--gradient-primary)" }}
 				aria-hidden
 			/>
 			<div
-				className="absolute top-40 -right-32 w-[360px] h-[360px] rounded-full opacity-20 blur-3xl animate-blob"
+				className="absolute top-40 -right-32 w-90 h-90 rounded-full opacity-20 blur-3xl animate-blob"
 				style={{ background: "var(--gradient-primary)", animationDelay: "-6s" }}
 				aria-hidden
 			/>
@@ -47,7 +47,7 @@ export function Hero() {
 					<div className="flex flex-wrap gap-3 pt-2">
 						<a
 							href="#contact"
-							className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-medium shadow-elegant hover:scale-[1.03] transition-transform"
+							className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant hover:scale-[1.03] transition-transform"
 						>
 							<Mail size={16} /> {t("hero_contact")}
 						</a>
