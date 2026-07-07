@@ -13,14 +13,21 @@ export function Projects() {
 		liveUrl?: string;
 	}[] = [
 		{
-			name: "FilmStar",
+			name: "proj_canteen_title",
+			descKey: "proj_canteen_desc",
+			tags: ["TypeScript", "React", "TanStack Router", "SWR", "Panda CSS"],
+			githubUrl: "https://github.com/LukaCulina/sofascore-canteen",
+			liveUrl: "https://sofascore-canteen.vercel.app/",
+		},
+		{
+			name: "proj_film_title",
 			descKey: "proj_film_desc",
 			tags: ["React", "API"],
 			githubUrl: "https://github.com/LukaCulina/FilmStar",
 			liveUrl: "https://film-star.vercel.app/",
 		},
 		{
-			name: "TrekTrip",
+			name: "proj_trek_title",
 			descKey: "proj_trek_desc",
 			tags: ["React", "Spring Boot", "REST"],
 			githubUrl: "https://github.com/LukaCulina/TrekTrip",
@@ -28,20 +35,20 @@ export function Projects() {
 		},
 		
 		{
-			name: "Terraforming Mars",
+			name: "proj_tm_title",
 			descKey: "proj_tm_desc",
 			tags: ["Java", "JavaFX"],
 			githubUrl: "https://github.com/LukaCulina/Terraforming-Mars",
 		},
 		{
-			name: "Pomodoro Timer",
+			name: "proj_pom_title",
 			descKey: "proj_pom_desc",
 			tags: ["JavaScript", "HTML", "CSS"],
 			githubUrl: "https://github.com/LukaCulina/Pomodoro",
 			liveUrl: "https://lukaculina.github.io/Pomodoro/",
 		},
 		{
-			name: "Snake Game",
+			name: "proj_snake_title",
 			descKey: "proj_snake_desc",
 			tags: ["JavaScript", "Canvas"],
 			githubUrl: "https://github.com/LukaCulina/Zmijica",
