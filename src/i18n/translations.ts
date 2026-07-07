@@ -53,18 +53,20 @@ const en = {
 
 	proj_eyebrow: "Projects",
 	proj_title: "Things I've built",
-	proj_tm_desc:
-		"Desktop implementation of the popular board game with advanced turn logic and a JavaFX UI.",
-	proj_pom_desc:
-		"Minimalist productivity timer with configurable work and break cycles.",
-	proj_snake_desc:
-		"Classic Snake game written in plain JavaScript with the Canvas API.",
-	proj_trek_desc:
-		"Full-stack app with a React frontend consuming a RESTful API built on Spring Boot.",
-	proj_film_desc:
-		"Responsive React app integrating an external API for managing movie data.",
-	proj_tech_desc:
-		"Erasmus+ BIP project focused on digital collaboration tools and data analysis with LLMs.",
+	proj_canteen_title: "SofaScore Canteen",
+	proj_canteen_desc: "Internal canteen management application developed during the SofaScore Academy, featuring real-time data fetching, meal planning, and order tracking.",
+	proj_film_title: "FilmStar",
+	proj_film_desc: "Responsive React app integrating an external API for managing movie data.",
+	proj_trek_title: "TrekTrip",
+	proj_trek_desc: "Full-stack app with a React frontend consuming a RESTful API built on Spring Boot.",
+	proj_tm_title: "Terraforming Mars",
+	proj_tm_desc: "Desktop implementation of the popular board game with advanced turn logic and a JavaFX UI.",
+	proj_pom_title: "Pomodoro Timer",
+	proj_pom_desc: "Minimalist productivity timer with configurable work and break cycles.",
+	proj_snake_title: "Snake Game",
+	proj_snake_desc: "Classic Snake game written in plain JavaScript with the Canvas API.",
+	proj_tech_title: "Erasmus+ BIP",
+	proj_tech_desc: "Project focused on digital collaboration tools and data analysis with LLMs.",
 
 	future_eyebrow: "Coming soon",
 	future_title: "Ideas in the making",
@@ -156,19 +158,20 @@ const hr: Record<keyof typeof en, string> = {
     exp_sofa_b4: "Blisko surađivao sa starijim inženjerima, primajući strukturirane povratne informacije tijekom cijelog razvojnog ciklusa.",
 	// Projects
 	proj_eyebrow: "Projekti",
-	proj_title: "Stvari koje sam izgradio",
-	proj_tm_desc:
-		"Desktop implementacija popularne društvene igre s naprednom logikom poteza i UI-em u JavaFX-u.",
-	proj_pom_desc:
-		"Minimalistički produktivnosti tajmer s konfigurabilnim ciklusima rada i pauze.",
-	proj_snake_desc:
-		"Klasična Snake igra napisana u čistom JavaScriptu uz Canvas API.",
-	proj_trek_desc:
-		"Full-stack aplikacija s React frontendom koji konzumira RESTful API izgrađen na Spring Bootu.",
-	proj_film_desc:
-		"Responzivna React aplikacija koja integrira eksterni API za upravljanje filmskim podacima.",
-	proj_tech_desc:
-		"Erasmus+ BIP projekt fokusiran na digitalne kolaboracijske alate i analizu podataka pomoću LLM-ova.",
+	proj_canteen_title: "SofaScore Kantina",
+	proj_canteen_desc: "Interna aplikacija za upravljanje kantinom razvijena u sklopu SofaScore akademije, s fokusom na dohvat podataka u stvarnom vremenu i planiranje obroka.",
+	proj_film_title: "FilmStar",
+	proj_film_desc: "Responzivna React aplikacija koja integrira vanjski API za upravljanje podacima o filmovima.",
+	proj_trek_title: "TrekTrip",
+	proj_trek_desc: "Full-stack aplikacija s React sučeljem koja koristi RESTful API temeljen na Spring Boot-u.",
+	proj_tm_title: "Terraforming Mars",
+	proj_tm_desc: "Desktop implementacija popularne društvene igre s naprednom logikom poteza i JavaFX sučeljem.",
+	proj_pom_title: "Pomodoro Timer",
+	proj_pom_desc: "Minimalistički tajmer za produktivnost s podesivim ciklusima rada i odmora.",
+	proj_snake_title: "Zmijica",
+	proj_snake_desc: "Klasična igra Zmijica napisana u čistom JavaScriptu koristeći Canvas API.",
+	proj_tech_title: "Erasmus+ BIP",
+	proj_tech_desc: "Projekt fokusiran na alate za digitalnu suradnju i analizu podataka pomoću LLM-ova.",
 	// Future
 	future_eyebrow: "Uskoro",
 	future_title: "Buduće ideje u izradi",
