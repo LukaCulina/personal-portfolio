@@ -60,7 +60,7 @@ export function Projects() {
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 				{projects.map((p) => (
 					<div
-						key={p.name}
+						key={p.nameKey}
 						className="group relative p-6 rounded-2xl border border-border bg-card/50 hover:bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant overflow-hidden flex flex-col"
 					>
 						<div
@@ -80,7 +80,7 @@ export function Projects() {
 									rel="noreferrer"
 									className="font-display text-lg font-semibold group-hover:text-primary transition-colors"
 								>
-									{p.nameKey}
+									{t(p.nameKey)}
 								</a>
 
 								<div className="flex items-center gap-3 text-muted-foreground">
