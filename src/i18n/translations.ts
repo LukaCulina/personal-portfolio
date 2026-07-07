@@ -53,8 +53,8 @@ const en = {
 
 	proj_eyebrow: "Projects",
 	proj_title: "Things I've built",
-	proj_canteen_title: "SofaScore Canteen",
-	proj_canteen_desc: "Internal canteen management application developed during the SofaScore Academy, featuring real-time data fetching, meal planning, and order tracking.",
+	proj_canteen_title: "Sofascore Canteen",
+	proj_canteen_desc: "Internal canteen management application developed during the Sofascore Academy, featuring real-time data fetching, meal planning, and order tracking.",
 	proj_film_title: "FilmStar",
 	proj_film_desc: "Responsive React app integrating an external API for managing movie data.",
 	proj_trek_title: "TrekTrip",
@@ -158,8 +158,8 @@ const hr: Record<keyof typeof en, string> = {
     exp_sofa_b4: "Blisko surađivao sa starijim inženjerima, primajući strukturirane povratne informacije tijekom cijelog razvojnog ciklusa.",
 	// Projects
 	proj_eyebrow: "Projekti",
-	proj_canteen_title: "SofaScore Kantina",
-	proj_canteen_desc: "Interna aplikacija za upravljanje kantinom razvijena u sklopu SofaScore akademije, s fokusom na dohvat podataka u stvarnom vremenu i planiranje obroka.",
+	proj_canteen_title: "Sofascore Kantina",
+	proj_canteen_desc: "Interna aplikacija za upravljanje kantinom razvijena u sklopu Sofascore akademije, s fokusom na dohvat podataka u stvarnom vremenu i planiranje obroka.",
 	proj_film_title: "FilmStar",
 	proj_film_desc: "Responzivna React aplikacija koja integrira vanjski API za upravljanje podacima o filmovima.",
 	proj_trek_title: "TrekTrip",
