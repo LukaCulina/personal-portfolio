@@ -7,8 +7,8 @@ export function Hero() {
 
 	const isEnglish = lang === "en";
 	const cvFilePath = isEnglish
-		? "/cv/Luka-Culina-CV-EN.pdf"
-		: "/cv/Luka-Culina-CV-HR.pdf";
+		? "/cv/Luka_Culina_CV_EN.pdf"
+		: "/cv/Luka_Culina_CV_HR.pdf";
 	const cvFileName = isEnglish
 		? "Luka_Culina_CV_EN.pdf"
 		: "Luka_Culina_CV_HR.pdf";
