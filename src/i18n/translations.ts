@@ -119,8 +119,8 @@ const hr: Record<keyof typeof en, string> = {
 	hero_available: "Dostupan za suradnju",
 	hero_tagline:
 		"Full-stack developer i Platform Build Specialist. Gradim moderna web rješenja koristeći React, Spring Boot i pažnju prema svakom detalju.",
-	hero_contact: "Kontaktiraj me",
-	hero_cv: "Preuzmi CV",
+	hero_contact: "Kontaktirajte me",
+	hero_cv: "Preuzmite CV",
 	hero_github: "GitHub",
 	// About
 	about_eyebrow: "O meni",
@@ -203,7 +203,7 @@ const hr: Record<keyof typeof en, string> = {
 	contact_eyebrow: "Kontakt",
 	contact_title: "Čujmo se.",
 	contact_intro:
-		"Otvoren sam za nove prilike, suradnje i zanimljive projekte. Javite se na bilo koji način koji vam odgovara.",
+		"Otvoren sam za nove prilike, suradnje i zanimljive projekte. Javite se na bilo koji način koji Vam odgovara.",
 	contact_email: "Email",
 	contact_phone: "Telefon",
 	contact_github: "GitHub",
