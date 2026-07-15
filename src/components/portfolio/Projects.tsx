@@ -6,42 +6,48 @@ import { Section } from "./Section";
 export function Projects() {
 	const { t } = useApp();
 	const projects: {
-		name: string;
+		nameKey: TranslationKey;
 		descKey: TranslationKey;
 		tags: string[];
 		githubUrl?: string;
 		liveUrl?: string;
 	}[] = [
 		{
-			name: "FilmStar",
+			nameKey: "proj_canteen_title",
+			descKey: "proj_canteen_desc",
+			tags: ["TypeScript", "React", "TanStack Router", "SWR", "Panda CSS"],
+			githubUrl: "https://github.com/LukaCulina/sofascore-canteen",
+			liveUrl: "https://sofascore-canteen.vercel.app/",
+		},
+		{
+			nameKey: "proj_film_title",
 			descKey: "proj_film_desc",
 			tags: ["React", "API"],
 			githubUrl: "https://github.com/LukaCulina/FilmStar",
 			liveUrl: "https://film-star.vercel.app/",
 		},
 		{
-			name: "TrekTrip",
+			nameKey: "proj_trek_title",
 			descKey: "proj_trek_desc",
 			tags: ["React", "Spring Boot", "REST"],
 			githubUrl: "https://github.com/LukaCulina/TrekTrip",
 			liveUrl: "https://trek-trip.vercel.app/",
 		},
-		
 		{
-			name: "Terraforming Mars",
+			nameKey: "proj_tm_title",
 			descKey: "proj_tm_desc",
 			tags: ["Java", "JavaFX"],
 			githubUrl: "https://github.com/LukaCulina/Terraforming-Mars",
 		},
 		{
-			name: "Pomodoro Timer",
+			nameKey: "proj_pom_title",
 			descKey: "proj_pom_desc",
 			tags: ["JavaScript", "HTML", "CSS"],
 			githubUrl: "https://github.com/LukaCulina/Pomodoro",
 			liveUrl: "https://lukaculina.github.io/Pomodoro/",
 		},
 		{
-			name: "Snake Game",
+			nameKey: "proj_snake_title",
 			descKey: "proj_snake_desc",
 			tags: ["JavaScript", "Canvas"],
 			githubUrl: "https://github.com/LukaCulina/Zmijica",
@@ -54,10 +60,9 @@ export function Projects() {
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 				{projects.map((p) => (
 					<div
-						key={p.name}
+						key={p.nameKey}
 						className="group relative p-6 rounded-2xl border border-border bg-card/50 hover:bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant overflow-hidden flex flex-col"
 					>
-						{/* Hover efekt pozadine (ostaje isti) */}
 						<div
 							className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
 							style={{
@@ -69,17 +74,15 @@ export function Projects() {
 
 						<div className="relative flex-1 flex flex-col">
 							<div className="flex items-start justify-between mb-3">
-								{/* Ako ima live link, naslov vodi na live, inače na github */}
 								<a
 									href={p.liveUrl || p.githubUrl}
 									target="_blank"
 									rel="noreferrer"
 									className="font-display text-lg font-semibold group-hover:text-primary transition-colors"
 								>
-									{p.name}
+									{t(p.nameKey)}
 								</a>
 
-								{/* Ikonice gore desno */}
 								<div className="flex items-center gap-3 text-muted-foreground">
 									{p.githubUrl && (
 										<a
@@ -93,7 +96,6 @@ export function Projects() {
 										</a>
 									)}
 
-									{/* External Link (Prikazuje se SAMO ako postoji liveUrl) */}
 									{p.liveUrl && (
 										<a
 											href={p.liveUrl}
